@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+  api:
+    build: ./api
+    container_name: 'api_gpo_axo'
+    restart: 'always'
+    ports:
+      - '9001:80'
+    volumes:
+      - './api:/var/www/html/'
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: gpo_axo
+      MYSQL_ROOT_PASSWORD: '$gpo_axo.123'
+      MYSQL_USER: 'gpo_axo'
+      MYSQL_PASS: '$gpo_axo.123'
+    volumes:
+      - my-datavolume:/var/lib/mysql
+volumes:
+  my-datavolume:
