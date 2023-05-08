@@ -1,6 +1,6 @@
 # prueba_grupoaxo
 
-# to initialize the project need to run:
+# to initialize the project need to run in the root project
 
 docker-compose up -d
 
