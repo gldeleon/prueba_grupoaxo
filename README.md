@@ -33,7 +33,7 @@ php artisan migrate
     "message": "Results"
 }
 
-### in the process check the table average in column resultaverage to check the saved data
+### in the process check the table average in column resultaverage to see the saved data
 
 ### and that all
 
